@@ -1,0 +1,21 @@
+Package: nefin
+Type: Package
+Title: Download NEFIN data files to R
+Version: 0.1.0
+Author: Bernardo Reckziegel
+Maintainer: Bernardo Reckziegel <bernardo_cse@hotmail.com>
+Description: Download NEFIN data files to R in a tidyverse friendly format.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.3
+Imports: 
+    curl,
+    dplyr,
+    forcats,
+    lubridate,
+    purrr,
+    readxl,
+    rlang,
+    tidyr,
+    tidyselect
