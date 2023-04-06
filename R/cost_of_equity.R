@@ -44,7 +44,7 @@ cost_of_equity <- function() {
   tbl <- purrr::map2(
     .x = tbl,
     .y = sectors,
-    .f = ~ add_column(.x, sectors = .y)
+    .f = ~ tibble::add_column(.x, sectors = .y)
   ) |>
     purrr::list_rbind()
 

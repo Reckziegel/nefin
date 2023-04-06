@@ -16,10 +16,12 @@ knitr::opts_chunk$set(
 # nefin
 
 <!-- badges: start -->
+
 [![R-CMD-check](https://github.com/Reckziegel/nefin/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Reckziegel/nefin/actions/workflows/R-CMD-check.yaml)
+
 <!-- badges: end -->
 
-The goal of `nefin` is to facilitate the access to data provided by NEFIN: http://nefin.com.br/.
+The goal of `nefin` is to facilitate the access to the datasets computed by NEFIN: <http://nefin.com.br/>.
 
 The package is reviewed monthly in order to keep the API working properly.
 
@@ -27,7 +29,7 @@ Any doubts or suggestions, please, open an issue.
 
 ## Installation
 
-You can install the development version of nefin from [GitHub](https://github.com/) with:
+You can install the development version of `nefin` from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
@@ -35,8 +37,6 @@ devtools::install_github("Reckziegel/nefin")
 ```
 
 ## Example
-
-
 
 ```{r example}
 library(nefin)
@@ -47,5 +47,9 @@ risk_factors()
 # Get the Dividend Yield for the Market
 dividend_yield()
 
-```
+# Cost of Equity for Different Horizons and Sectors
+cost_of_equity()
 
+# Fama-French Factor Portfolios
+portfolios_sorted_by_book_to_market()
+```
