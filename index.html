@@ -59,14 +59,15 @@
 <p>The goal of <code>nefin</code> is to facilitate the access to the datasets computed by NEFIN: <a href="http://nefin.com.br/" class="external-link uri">http://nefin.com.br/</a>.</p>
 <p>The package is reviewed monthly in order to keep the API working properly.</p>
 <p>Any doubts or suggestions, please, open an issue.</p>
-<div class="section level2">
-<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
-</h2>
+<p>This file was last updated at: 2023-05-11 22:14:41.</p>
+</div>
+<div class="section level1">
+<h1 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h1>
 <p>You can install the development version of <code>nefin</code> from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("devtools")</span></span>
 <span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"Reckziegel/nefin"</span><span class="op">)</span></span></code></pre></div>
-</div>
 <div class="section level2">
 <h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
 </h2>
@@ -75,7 +76,7 @@
 <span></span>
 <span><span class="co"># Get the Brazilian Risk Factors</span></span>
 <span><span class="fu"><a href="reference/risk_factors.html">risk_factors</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 5,487 x 7</span></span>
+<span><span class="co">#&gt; # A tibble: 5,528 x 7</span></span>
 <span><span class="co">#&gt;    date       rm_minus_rf        smb       hml       wml      iml risk_free</span></span>
 <span><span class="co">#&gt;    &lt;date&gt;           &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;</span></span>
 <span><span class="co">#&gt;  1 2001-01-02    0.00660   0.000524   0.0655   -0.00631   0.0141   0.000579</span></span>
@@ -88,11 +89,11 @@
 <span><span class="co">#&gt;  8 2001-01-11    0.00469  -0.0108    -0.00345  -0.00306  -0.00228  0.000568</span></span>
 <span><span class="co">#&gt;  9 2001-01-12   -0.00678   0.00662    0.00347   0.00602   0.0103   0.000567</span></span>
 <span><span class="co">#&gt; 10 2001-01-15    0.00511   0.0000672 -0.000760 -0.0138    0.00689  0.000566</span></span>
-<span><span class="co">#&gt; # i 5,477 more rows</span></span>
+<span><span class="co">#&gt; # i 5,518 more rows</span></span>
 <span></span>
 <span><span class="co"># Get the Dividend Yield for the Market</span></span>
 <span><span class="fu"><a href="reference/dividend_yield.html">dividend_yield</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 1,158 x 2</span></span>
+<span><span class="co">#&gt; # A tibble: 1,163 x 2</span></span>
 <span><span class="co">#&gt;    date            dy</span></span>
 <span><span class="co">#&gt;    &lt;date&gt;       &lt;dbl&gt;</span></span>
 <span><span class="co">#&gt;  1 2001-02-02 0.00723</span></span>
@@ -105,11 +106,11 @@
 <span><span class="co">#&gt;  8 2001-03-23 0.00841</span></span>
 <span><span class="co">#&gt;  9 2001-03-30 0.00842</span></span>
 <span><span class="co">#&gt; 10 2001-04-06 0.00694</span></span>
-<span><span class="co">#&gt; # i 1,148 more rows</span></span>
+<span><span class="co">#&gt; # i 1,153 more rows</span></span>
 <span></span>
 <span><span class="co"># Cost of Equity for Different Horizons and Sectors</span></span>
 <span><span class="fu"><a href="reference/cost_of_equity.html">cost_of_equity</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 6,104 x 4</span></span>
+<span><span class="co">#&gt; # A tibble: 6,160 x 4</span></span>
 <span><span class="co">#&gt;    date       sectors        horizon          cost</span></span>
 <span><span class="co">#&gt;    &lt;date&gt;     &lt;fct&gt;          &lt;fct&gt;           &lt;dbl&gt;</span></span>
 <span><span class="co">#&gt;  1 2005-01-01 Basic_Products 1-Year Project   16.3</span></span>
@@ -122,11 +123,11 @@
 <span><span class="co">#&gt;  8 2005-02-01 Basic_Products 20-Year Project  12.7</span></span>
 <span><span class="co">#&gt;  9 2005-03-01 Basic_Products 1-Year Project   17.0</span></span>
 <span><span class="co">#&gt; 10 2005-03-01 Basic_Products 5-Year Project   13  </span></span>
-<span><span class="co">#&gt; # i 6,094 more rows</span></span>
+<span><span class="co">#&gt; # i 6,150 more rows</span></span>
 <span></span>
 <span><span class="co"># Fama-French Factor Portfolios</span></span>
 <span><span class="fu"><a href="reference/portfolios.html">portfolios_sorted_by_book_to_market</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 5,487 x 4</span></span>
+<span><span class="co">#&gt; # A tibble: 5,528 x 4</span></span>
 <span><span class="co">#&gt;    date             bm1      bm2      bm3</span></span>
 <span><span class="co">#&gt;    &lt;date&gt;         &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;</span></span>
 <span><span class="co">#&gt;  1 2001-01-02 -0.00802  -0.00911  0.0575 </span></span>
@@ -139,9 +140,10 @@
 <span><span class="co">#&gt;  8 2001-01-11 -0.00224   0.0126  -0.00570</span></span>
 <span><span class="co">#&gt;  9 2001-01-12 -0.000977 -0.0145   0.00250</span></span>
 <span><span class="co">#&gt; 10 2001-01-15  0.00789   0.00178  0.00713</span></span>
-<span><span class="co">#&gt; # i 5,477 more rows</span></span></code></pre></div>
+<span><span class="co">#&gt; # i 5,518 more rows</span></span></code></pre></div>
 </div>
 </div>
+
   </main><aside class="col-md-3"><div class="license">
 <h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
