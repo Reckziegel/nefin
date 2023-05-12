@@ -17,7 +17,9 @@ properly.
 
 Any doubts or suggestions, please, open an issue.
 
-## Installation
+This file was last updated at: 2023-05-11 22:14:41.
+
+# Installation
 
 You can install the development version of `nefin` from
 [GitHub](https://github.com/) with:
@@ -34,7 +36,7 @@ library(nefin)
 
 # Get the Brazilian Risk Factors
 risk_factors()
-#> # A tibble: 5,487 x 7
+#> # A tibble: 5,528 x 7
 #>    date       rm_minus_rf        smb       hml       wml      iml risk_free
 #>    <date>           <dbl>      <dbl>     <dbl>     <dbl>    <dbl>     <dbl>
 #>  1 2001-01-02    0.00660   0.000524   0.0655   -0.00631   0.0141   0.000579
@@ -47,11 +49,11 @@ risk_factors()
 #>  8 2001-01-11    0.00469  -0.0108    -0.00345  -0.00306  -0.00228  0.000568
 #>  9 2001-01-12   -0.00678   0.00662    0.00347   0.00602   0.0103   0.000567
 #> 10 2001-01-15    0.00511   0.0000672 -0.000760 -0.0138    0.00689  0.000566
-#> # i 5,477 more rows
+#> # i 5,518 more rows
 
 # Get the Dividend Yield for the Market
 dividend_yield()
-#> # A tibble: 1,158 x 2
+#> # A tibble: 1,163 x 2
 #>    date            dy
 #>    <date>       <dbl>
 #>  1 2001-02-02 0.00723
@@ -64,11 +66,11 @@ dividend_yield()
 #>  8 2001-03-23 0.00841
 #>  9 2001-03-30 0.00842
 #> 10 2001-04-06 0.00694
-#> # i 1,148 more rows
+#> # i 1,153 more rows
 
 # Cost of Equity for Different Horizons and Sectors
 cost_of_equity()
-#> # A tibble: 6,104 x 4
+#> # A tibble: 6,160 x 4
 #>    date       sectors        horizon          cost
 #>    <date>     <fct>          <fct>           <dbl>
 #>  1 2005-01-01 Basic_Products 1-Year Project   16.3
@@ -81,11 +83,11 @@ cost_of_equity()
 #>  8 2005-02-01 Basic_Products 20-Year Project  12.7
 #>  9 2005-03-01 Basic_Products 1-Year Project   17.0
 #> 10 2005-03-01 Basic_Products 5-Year Project   13  
-#> # i 6,094 more rows
+#> # i 6,150 more rows
 
 # Fama-French Factor Portfolios
 portfolios_sorted_by_book_to_market()
-#> # A tibble: 5,487 x 4
+#> # A tibble: 5,528 x 4
 #>    date             bm1      bm2      bm3
 #>    <date>         <dbl>    <dbl>    <dbl>
 #>  1 2001-01-02 -0.00802  -0.00911  0.0575 
@@ -98,5 +100,5 @@ portfolios_sorted_by_book_to_market()
 #>  8 2001-01-11 -0.00224   0.0126  -0.00570
 #>  9 2001-01-12 -0.000977 -0.0145   0.00250
 #> 10 2001-01-15  0.00789   0.00178  0.00713
-#> # i 5,477 more rows
+#> # i 5,518 more rows
 ```

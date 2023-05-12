@@ -27,7 +27,9 @@ The package is reviewed monthly in order to keep the API working properly.
 
 Any doubts or suggestions, please, open an issue.
 
-## Installation
+This file was last updated at: `r Sys.time()`.
+
+# Installation
 
 You can install the development version of `nefin` from [GitHub](https://github.com/) with:
 
