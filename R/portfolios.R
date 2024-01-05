@@ -72,7 +72,7 @@ portfolios_sorted_by_illiquidity <- function() {
 
 #' @rdname portfolios
 #' @export
-portfolios_sorterd_by_industry <- function() {
+portfolios_sorted_by_industry <- function() {
 
   url <- "http://nefin.com.br/data/Portfolios/7_portfolios_sorted_by_industry.xls"
   destfile <- "X7_portfolios_sorted_by_industry.xls"
@@ -83,8 +83,8 @@ portfolios_sorterd_by_industry <- function() {
                                                                        "numeric", "numeric", "numeric",
                                                                        "numeric"))
   X7_portfolios_sorted_by_industry |>
-    dplyr::mutate(date = lubridate::ymd(paste0(.data$year, "/", .data$month, "/", .data$day))) |>
-    dplyr::select(.data$date, tidyselect::starts_with("Industry")) |>
+    dplyr::mutate(date = lubridate::ymd(paste0(year, "/", month, "/", day))) |>
+    dplyr::select(date, tidyselect::starts_with("Industry")) |>
     dplyr::rename_with(.fn = tolower)
 
 }

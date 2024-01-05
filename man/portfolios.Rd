@@ -5,7 +5,7 @@
 \alias{portfolios_sorted_by_book_to_market}
 \alias{portfolios_sorted_by_momentum}
 \alias{portfolios_sorted_by_illiquidity}
-\alias{portfolios_sorterd_by_industry}
+\alias{portfolios_sorted_by_industry}
 \title{Download Factor Portfolios}
 \usage{
 portfolios_sorted_by_size()
@@ -16,7 +16,7 @@ portfolios_sorted_by_momentum()
 
 portfolios_sorted_by_illiquidity()
 
-portfolios_sorterd_by_industry()
+portfolios_sorted_by_industry()
 }
 \value{
 A \code{tibble}

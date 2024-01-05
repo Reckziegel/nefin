@@ -13,11 +13,13 @@ Imports:
     curl,
     dplyr,
     forcats,
+    janitor (>= 2.2.0),
     lubridate,
     purrr,
     readxl,
     rlang,
     tibble,
     tidyr,
-    tidyselect
+    tidyselect,
+    vroom (>= 1.6.5)
 URL: https://reckziegel.github.io/nefin/

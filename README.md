@@ -17,7 +17,7 @@ properly.
 
 Any doubts or suggestions, please, open an issue.
 
-This file was last updated at: 2023-08-18 18:29:27.
+This file was last updated at: 2024-01-04 23:32:01.
 
 # Installation
 
@@ -36,24 +36,24 @@ library(nefin)
 
 # Get the Brazilian Risk Factors
 risk_factors()
-#> # A tibble: 5,571 x 7
-#>    date       rm_minus_rf        smb       hml       wml      iml risk_free
-#>    <date>           <dbl>      <dbl>     <dbl>     <dbl>    <dbl>     <dbl>
-#>  1 2001-01-02    0.00660   0.000524   0.0655   -0.00631   0.0141   0.000579
-#>  2 2001-01-03    0.0624    0.00539    0.00939  -0.0286    0.00451  0.000577
-#>  3 2001-01-04   -0.000310  0.00669   -0.00233  -0.000946 -0.00923  0.000574
-#>  4 2001-01-05   -0.0128    0.00352   -0.00240   0.00598   0.0251   0.000573
-#>  5 2001-01-08    0.00398   0.00788    0.00195  -0.00410  -0.00118  0.000573
-#>  6 2001-01-09    0.0200    0.00593   -0.000916  0.00956  -0.00398  0.000570
-#>  7 2001-01-10   -0.00437   0.0132     0.0125   -0.000691  0.0221   0.000570
-#>  8 2001-01-11    0.00469  -0.0108    -0.00345  -0.00306  -0.00228  0.000568
-#>  9 2001-01-12   -0.00678   0.00662    0.00347   0.00602   0.0103   0.000567
-#> 10 2001-01-15    0.00511   0.0000672 -0.000760 -0.0138    0.00689  0.000566
-#> # i 5,561 more rows
+#> # A tibble: 5,859 x 8
+#>    date            mkt       rf   mkt_rf   smb   hml   mom illiq
+#>    <date>        <dbl>    <dbl>    <dbl> <dbl> <dbl> <dbl> <dbl>
+#>  1 2000-01-03 -0.00702 0.000696 -0.00772    NA    NA    NA    NA
+#>  2 2000-01-04 -0.0528  0.000699 -0.0535     NA    NA    NA    NA
+#>  3 2000-01-05  0.0137  0.000695  0.0130     NA    NA    NA    NA
+#>  4 2000-01-06 -0.00283 0.000698 -0.00352    NA    NA    NA    NA
+#>  5 2000-01-07  0.0142  0.000694  0.0135     NA    NA    NA    NA
+#>  6 2000-01-10  0.0367  0.000685  0.0360     NA    NA    NA    NA
+#>  7 2000-01-11 -0.0213  0.000696 -0.0220     NA    NA    NA    NA
+#>  8 2000-01-12 -0.00529 0.000688 -0.00598    NA    NA    NA    NA
+#>  9 2000-01-13  0.0318  0.000689  0.0311     NA    NA    NA    NA
+#> 10 2000-01-14  0.0211  0.000688  0.0204     NA    NA    NA    NA
+#> # i 5,849 more rows
 
 # Get the Dividend Yield for the Market
 dividend_yield()
-#> # A tibble: 1,177 x 2
+#> # A tibble: 1,181 x 2
 #>    date            dy
 #>    <date>       <dbl>
 #>  1 2001-02-02 0.00723
@@ -66,11 +66,11 @@ dividend_yield()
 #>  8 2001-03-23 0.00841
 #>  9 2001-03-30 0.00842
 #> 10 2001-04-06 0.00694
-#> # i 1,167 more rows
+#> # i 1,171 more rows
 
 # Cost of Equity for Different Horizons and Sectors
 cost_of_equity()
-#> # A tibble: 6,216 x 4
+#> # A tibble: 6,272 x 4
 #>    date       sectors        horizon          cost
 #>    <date>     <fct>          <fct>           <dbl>
 #>  1 2005-01-01 Basic_Products 1-Year Project   16.3
@@ -83,11 +83,11 @@ cost_of_equity()
 #>  8 2005-02-01 Basic_Products 20-Year Project  12.7
 #>  9 2005-03-01 Basic_Products 1-Year Project   17.0
 #> 10 2005-03-01 Basic_Products 5-Year Project   13.0
-#> # i 6,206 more rows
+#> # i 6,262 more rows
 
 # Fama-French Factor Portfolios
 portfolios_sorted_by_book_to_market()
-#> # A tibble: 5,571 x 4
+#> # A tibble: 5,615 x 4
 #>    date             bm1      bm2      bm3
 #>    <date>         <dbl>    <dbl>    <dbl>
 #>  1 2001-01-02 -0.00802  -0.00911  0.0575 
@@ -100,5 +100,5 @@ portfolios_sorted_by_book_to_market()
 #>  8 2001-01-11 -0.00224   0.0126  -0.00570
 #>  9 2001-01-12 -0.000977 -0.0145   0.00250
 #> 10 2001-01-15  0.00789   0.00178  0.00713
-#> # i 5,561 more rows
+#> # i 5,605 more rows
 ```

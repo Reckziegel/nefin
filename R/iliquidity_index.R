@@ -9,7 +9,7 @@
 #' #iliquidity_index()
 iliquidity_index <- function() {
 
-  url <- "http://nefin.com.br/resources/risk_factors/Market_Liquidity.xls"
+  url <- "https://nefin.com.br/resources/risk_factors/Market_Liquidity.xls"
   destfile <- "Market_Liquidity.xls"
   curl::curl_download(url, destfile)
   Market_Liquidity <- readxl::read_excel(destfile)
